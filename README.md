@@ -1,5 +1,6 @@
 #### Brief
 <sup><i>What is this system? Who tasked you? And why? Don't forget to tag/link</i></sup>
+<br>
 This is an application from these 6 suggested ones from #ai/chatgpt in [this conversation](https://chatgpt.com/share/68468aac-e7a8-8005-94be-56f9155702dc) (actually this is the first one). It aims initially to #android-dev in [[Kotlin]] - #self-paced -
 
 
@@ -10,6 +11,7 @@ This is an application from these 6 suggested ones from #ai/chatgpt in [this con
 ---
 ## **R**equirements 
 <sup><i>Just copy every single sequence from the client</i></sup>
+<br>
 #### [[Project Requirements in IT#Functional|Functional]] Goals
 
 **🔢 Input Handling:**
@@ -67,12 +69,14 @@ Not required, but great if you want to improve:
 
 ## **A**rchitecture
 <sup><i>Embed an Excalidraw note describing arch.</i></sup>
+<br>
 ![[Simple Calculator Android Project architecture.excalidraw|700]]
 <br>
 <br>
 
 ## Dev. **N**otes
 <sup><i>Include any code snippet or newly learnt concept that might be linky</i></sup>
+<br>
 
 | File/Module                     | Short Purpose                           | Further Notes                                                  |
 | ------------------------------- | --------------------------------------- | -------------------------------------------------------------- |
@@ -336,12 +340,14 @@ binding.divBtn.setOnClickListener {
 ---
 ## **T**o-dos
 <sup><i>A comprehensive list of tasks for following up during work</i></sup>
+<br>
 - [/] Because I have finished the project before beginning documenting, this will be empty. ✅ 2025-06-09
 <br>
 
 ---
 ## Final **O**utput
 <sup><i>Here, just celebrate finishing piece of software, with evidences!</i></sup>
+<br>
 ![[SimpleCalculatorAndroidKotlinOutput.mp4]]
 
 - [GitHub Repository](https://github.com/douddjs/1SimpleCalcAndroidTraining.git)
