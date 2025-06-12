@@ -5,14 +5,20 @@ This is an application from these 6 suggested ones from #ai/chatgpt in [this con
 
 
 ###### Freelinting
-- That's important because I need to study hard in short time for preparing for my #pearson Unit-7 after almost 2 weeks from [[Mon 09.06.25]]
+- That's important because I need to study hard in short time for preparing for my #pearson Unit-7 after almost 2 weeks from [Mon 09.06.25]
 - That's empathetic because this is the first time to realize that I have finished an application of both UI and logic; my idea about full-stacking was about how it's hard to handle, and I really found it hard 😁  
+
 <br>
+
 ---
+
 ## **R**equirements 
+
 <sup><i>Just copy every single sequence from the client</i></sup>
+
 <br>
-#### [[Project Requirements in IT#Functional|Functional]] Goals
+
+#### [Functional] Goals
 
 **🔢 Input Handling:**
 - Read values from both input fields.
@@ -33,7 +39,7 @@ For each button:
     - Invalid input.
     - Division by zero.
 
-#### [[Project Requirements in IT#Functional|Non-Functional]] Goals
+#### [Non-Functional] Goals
 
 **📱 Required UI Components:**
 - 2 input fields:
@@ -61,22 +67,26 @@ Not required, but great if you want to improve:
 - Integer mode vs decimal mode toggle.
 - Vibration on invalid input.
 
-
-#### User Stories %% (if there's explanation) %%
-
-
 <br>
 
 ## **A**rchitecture
+
 <sup><i>Embed an Excalidraw note describing arch.</i></sup>
+
 <br>
+
 ![[Simple Calculator Android Project architecture.excalidraw|700]]
+
 <br>
+
 <br>
 
 ## Dev. **N**otes
+
 <sup><i>Include any code snippet or newly learnt concept that might be linky</i></sup>
+
 <br>
+
 
 | File/Module                     | Short Purpose                           | Further Notes                                                  |
 | ------------------------------- | --------------------------------------- | -------------------------------------------------------------- |
@@ -86,21 +96,27 @@ Not required, but great if you want to improve:
 |                                 |                                         |                                                                |
 | `{gradle icon}build.gradle.kts` | For [[Meta Programming]]                | Controls project attributes, as a manifest                     |
 
-##### Made-with-:LiHeart: Cheatsheet!
+
+##### Made-with-𖹭 Cheatsheet!
 
 - I have used this advice: [[Difference Between Traditional & Modern View Calling In Android]]
+
 ```kotlin title="build.gradle.kts (:app)"
 // ...
 // for generating `ViewBinding` class
-buildFeatures {  
+buildFeatures { 	// in camelCase
     viewBinding = true  
 }
 // ...
 ```
+
 > - Here's the rest of the idea: [[ViewBinding Class]]
 > - I'm welling to use it from now on. 
+
 <br>
+
 - How to make vibration per certain touches (was used on operations buttons):
+
 ```kotlin 
 import android.Manifest
 import android.os.Vibrator  
@@ -125,10 +141,14 @@ private fun vibrate() {
     }  
 }
 ```
+
 > - This code is for a function called `vibrate()`, just call it in your logic inside lambdas to use (NOTE: it has one intensity)
 > - If you had any Manifest related issues, auto-solve it with Android Studio 
+
 <br>
-- `{kotlin}inputsChecker()`: Self-made function; for extracting the logic of parsing & validating inputs for multiple use for each operation:
+
+- `inputsChecker()`: Self-made function; for extracting the logic of parsing & validating inputs for multiple use for each operation:
+
 ```kotlin
 // IN `OnCreate()` METHOD
 @RequiresPermission(allOf = [Manifest.permission.VIBRATE, Manifest.permission.VIBRATE])  
@@ -144,10 +164,14 @@ fun inputsChecker(): Pair<Double, Double> {
     return Pair(in1, in2)  
 }
 ```
-> - `{kotlin icon}Pair<Type, Type>` is a builtin class acts like [[Tuples in Coding|Tuples]] in [[Rust]] or [[Python]], because there's no primitive datatype for Tuples functionality, but classes like `{kotlin icon}Pair` and `{kotlin icon}Triple` are enough for most uses 
-import android.Manifest
+
+> - `Pair<Type, Type>` is a builtin class acts like [Tuples] in [Rust] or [Python], because there's no primitive datatype for Tuples functionality, but classes like `Pair` and `Triple` are enough for most uses 
+
+
 <br>
-- `{kotlin icon}binding.divBtn.setOnClickListener {  }`: the trickiest button's [[lambda]] in this app as an example:
+
+- `binding.divBtn.setOnClickListener {  }`: the trickiest button's [lambda] in this app as an example:
+
 ```kotlin
 binding.divBtn.setOnClickListener {  
     val (num1, num2) = inputsChecker()  
@@ -159,9 +183,13 @@ binding.divBtn.setOnClickListener {
         binding.resultView.text = result.toString()  
     }
 ```
-> - NOTE: Don't forget the `{kotlin icon}.text` method for the `{kotlin icon}TextView` object, while `{kotlin icon}toString()` method for the [[String in Coding|String]] object holding data (as here it's `{kotlin}result`)
+
+> - NOTE: Don't forget the `.text` method for the `TextView` object, while `.toString()` method for the [String] object holding data (as here it's `result`)
+
 <br>
-- `activity_main.xml`: the whole UI *(I will indulge the whole UI just because its details are limitless)*
+
+- **activity_main.xml**: the whole UI *(I will indulge the whole UI just because its details are limitless)*
+
 ```xml title=main_activity.xml
 <?xml version="1.0" encoding="utf-8"?>  
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
@@ -308,10 +336,13 @@ binding.divBtn.setOnClickListener {
 </LinearLayout>
 
 ```
+
 <br>
 
-- How to make a ripple (the visual watery waves beneath touches) to pass as an `{xml icon}android:background`:
+- How to make a ripple (the visual watery waves beneath touches) to pass as an `android:background`:
+
 ```xml title="button_ripple"
+
 <?xml version="1.0" encoding="utf-8"?>  
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"  
     android:color="?android:attr/colorControlHighlight">  
@@ -323,9 +354,11 @@ binding.divBtn.setOnClickListener {
     </item>  
 </ripple>
 ```
+
 <br>
 
 - Example for font configuration file:
+
 ```xml title="res/font/sfmono.xml"
 <?xml version="1.0" encoding="utf-8"?>  
 <font-family xmlns:android="http://schemas.android.com/apk/res/android">  
@@ -338,19 +371,29 @@ binding.divBtn.setOnClickListener {
 <br>
 
 ---
+
 ## **T**o-dos
+
 <sup><i>A comprehensive list of tasks for following up during work</i></sup>
+
 <br>
+
 - [/] Because I have finished the project before beginning documenting, this will be empty. ✅ 2025-06-09
+
 <br>
 
 ---
+
 ## Final **O**utput
+
 <sup><i>Here, just celebrate finishing piece of software, with evidences!</i></sup>
+
 <br>
+
 ![[SimpleCalculatorAndroidKotlinOutput.mp4]]
 
 - [GitHub Repository](https://github.com/douddjs/1SimpleCalcAndroidTraining.git)
+
 <br>
 
 ---
