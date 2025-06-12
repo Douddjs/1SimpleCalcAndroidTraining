@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Douddevz Calc.</string>
+    <string name="mul_sign" translatable="false">*</string>
+    <string name="sub_sign" translatable="false">-</string>
+    <string name="add_sign" translatable="false">+</string>
+    <string name="div_sign" translatable="false">/</string>
+    <string name="title">Douddz Calculator</string>
+    <string name="trademark_symbol" translatable="false">™</string>
+</resources>

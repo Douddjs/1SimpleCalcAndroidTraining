@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    android:paddingBottom="110dp"
+    android:gravity="center"
+    android:layout_gravity="top"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="-220dp"
+        android:layout_marginBottom="130dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/drafting_compass"
+            android:scaleX="0.6"
+            android:scaleY="0.6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textSize="24sp"
+            android:textColor="@color/baby_blue"
+            android:fontFamily="@font/satisfy"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trademark_symbol"
+            android:textSize="24sp"
+            android:textColor="@color/baby_blue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calculator"/>
+
+        <TextView
+            android:id="@+id/result_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="null"
+            android:fontFamily="@font/sfmono"
+            android:textSize="24sp"
+            />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="First Number"
+        android:fontFamily="@font/sfmono"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/light_grey"/>
+
+    <EditText
+        android:id="@+id/input2"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Second Number"
+        android:fontFamily="@font/sfmono"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/light_grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/baby_blue"
+            android:src="@drawable/circle_plus"
+            android:background="@drawable/button_ripple"
+            android:hapticFeedbackEnabled="true"
+            android:layout_marginHorizontal="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/sub_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/baby_blue"
+            android:src="@drawable/circle_minus"
+            android:background="@drawable/button_ripple"
+            android:hapticFeedbackEnabled="true"
+            android:layout_marginHorizontal="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/mul_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/baby_blue"
+            android:src="@drawable/circle_x"
+            android:background="@drawable/button_ripple"
+            android:hapticFeedbackEnabled="true"
+            android:layout_marginHorizontal="15dp"
+            />
+
+        <ImageButton
+            android:id="@+id/div_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/baby_blue"
+            android:src="@drawable/circle_divide"
+            android:background="@drawable/button_ripple"
+            android:hapticFeedbackEnabled="true"
+            android:layout_marginHorizontal="15dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
