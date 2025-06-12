@@ -1,20 +1,19 @@
 package com.example.simplecalculator
 
+//import android.widget.EditText
+//import android.content.Context
 import android.Manifest
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.util.Log
-//import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresPermission
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.simplecalculator.databinding.ActivityMainBinding
-import android.os.Vibrator
-import android.os.VibrationEffect
-//import android.content.Context
-import android.os.Build
-import androidx.annotation.RequiresPermission
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,13 +28,8 @@ class MainActivity : AppCompatActivity() {
         val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
 
         // For API 26+ use VibrationEffect
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val effect = VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE)
-            vibrator.vibrate(effect)
-        } else {
-            // Deprecated in API 26
-            vibrator.vibrate(50)
-        }
+        val effect = VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE)
+        vibrator.vibrate(effect)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
