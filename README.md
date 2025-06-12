@@ -1,3 +1,5 @@
+# Simple Calc. Android Training App
+
 #### Brief
 <sup><i>What is this system? Who tasked you? And why? Don't forget to tag/link</i></sup>
 <br>
@@ -75,7 +77,8 @@ Not required, but great if you want to improve:
 
 <br>
 
-![[Simple Calculator Android Project architecture.excalidraw|700]]
+<img src="Simple Calculator Android Project architecture.excalidraw" width="700" alt="Simple Calculator Architecture Diagram">
+<img src="Simple Calculator Android Project architecture .excalidraw" width="700" alt="Simple Calculator Architecture Diagram">
 
 <br>
 
@@ -390,7 +393,11 @@ binding.divBtn.setOnClickListener {
 
 <br>
 
-![[SimpleCalculatorAndroidKotlinOutput.mp4]]
+
+<video src="SimpleCalculatorAndroidKotlinOutput.mp4" autoplay loop muted width="600"></video>
+
+
+
 
 - [GitHub Repository](https://github.com/douddjs/1SimpleCalcAndroidTraining.git)
 
@@ -398,5 +405,5 @@ binding.divBtn.setOnClickListener {
 
 ---
 
-> [!fingerprint]  By me, Adham Ahmad Hosny
-> [:LiGithub:](https://github.com/douddjs) &emsp; [:LiLinkedin:](https://linkedin.com/in/douddev) &emsp; [:LiMessageCirclePlus:](https://wa.me/+201026777688)
+> By me, Adham Ahmad Hosny
+> [Github](https://github.com/douddjs) &emsp; [Linkedin](https://linkedin.com/in/douddev)
